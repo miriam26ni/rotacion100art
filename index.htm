@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crown.vercel • Digital Landscapes</title>
+  <meta name="description" content="Instant-download high-resolution digital landscape artwork."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #d4af37;
+      --dark: #121212;
+      --gray: #1e1e1e;
+      --light: #f8f8f8;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--dark);
+      color: #eee;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506905925346-5002a8d861f7?q=80&w=2070');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: 'Crown.vercel';
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: var(--gold);
+      letter-spacing: 8px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+    }
+    .hero-text {
+      max-width: 800px;
+      padding: 0 20px;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      margin-bottom: 20px;
+      color: white;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+    .btn {
+      background: var(--gold);
+      color: #000;
+      padding: 14px 36px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212,175,55,0.4); }
+
+    section { padding: 100px 5%; max-width: 1400px; margin: 0 auto; }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 60px;
+      color: var(--gold);
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: var(--gray);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.4s, box-shadow 0.4s;
+      position: relative;
+    }
+    .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
+    .card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+    .card-info {
+      padding: 20px;
+      text-align: center;
+    }
+    .price {
+      font-size: 1.8rem;
+      color: var(--gold);
+      margin: 10px 0;
+      font-weight: 600;
+    }
+    footer {
+      background: #0a0a0a;
+      padding: 80px 5%;
+      text-align: center;
+    }
+    .policies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      margin-top: 60px;
+      text-align: left;
+    }
+    .policy-card {
+      background: var(--gray);
+      padding: 30px;
+      border-radius: 12px;
+    }
+    .policy-card h3 {
+      color: var(--gold);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      header::after { font-size: 2.5rem; }
+      .hero-text h1 { font-size: 2.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero-text">
+      <h1>Instant Digital Landscapes</h1>
+      <p>Instant-download high-resolution digital artwork delivered immediately after purchase.</p>
+      <a href="#gallery" class="btn">Explore Collection</a>
+    </div>
+  </header>
+
+  <section id="gallery">
+    <h2>Our Collection</h2>
+    <div class="gallery">
+
+      <!-- Imagen 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506905925346-5002a8d861f7?q=80&w=2070" alt="Golden Mountains">
+        <div class="card-info">
+          <h3>Golden Hour Peaks</h3>
+          <p class="price">$10 USD</p>
+          <button class="btn buy-btn" data-img="https://images.unsplash.com/photo-1506905925346-5002a8d861f7?q=80&w=2070&auto=format&fit=crop">Buy & Download</button>
+        </div>
+      </div>
+
+      <!-- Imagen 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074" alt="Misty Forest">
+        <div class="card-info">
+          <h3>Misty Forest Dawn</h3>
+          <p class="price">$10 USD</p>
+          <button class="btn buy-btn" data-img="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=2074&auto=format&fit=crop">Buy & Download</button>
+        </div>
+      </div>
+
+      <!-- Imagen 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=2070" alt="Aurora Lake">
+        <div class="card-info">
+          <h3>Aurora Reflections</h3>
+          <p class="price">$10 USD</p>
+          <button class="btn buy-btn" data-img="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=2070&auto=format&fit=crop">Buy & Download</button>
+        </div>
+      </div>
+
+      <!-- Añade más imágenes aquí con la misma estructura -->
+      
+    </div>
+  </section>
+
+  <footer>
+    <h2>Policies & Info</h2>
+    <div class="policies">
+      <div class="policy-card">
+        <h3>Instant Delivery</h3>
+        <p>Your high-resolution file (5000px+) will be available for download immediately after purchase. No waiting, no shipping.</p>
+      </div>
+      <div class="policy-card">
+        <h3>Refund Policy</h3>
+        <p>Because these are digital products, all sales are final. No refunds or exchanges. Please contact us if you have any issues with your download.</p>
+      </div>
+      <div class="policy-card">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:hello@crown.vercel.app" style="color:var(--gold)">hello@crown.vercel.app</a><br>
+        We usually reply within 24 hours.</p>
+      </div>
+    </div>
+    <p style="margin-top:60px; opacity:0.6;">© 2025 Crown.vercel • All rights reserved</p>
+  </footer>
+
+  <script>
+    // Simulación de compra (descarga directa) - Para producción usa PayPal/Stripe + enlace real
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const confirmed = confirm(`Buy "Golden Hour Peaks" for $10?\n\nAfter payment you will instantly download the high-resolution file.`);
+        if (confirmed) {
+          const link = document.createElement('a');
+          link.href = this.getAttribute('data-img');
+          link.download = 'crown-landscape-' + Date.now() + '.jpg';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          alert('¡Thank you! Your download has started.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
